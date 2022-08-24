@@ -13,31 +13,31 @@ public class AdministratorController {
     @Autowired
     private AdministratorService adminService;
 
-    // END POINT TO FETCH ALL EMPLOYEES
+    // END POINT TO FETCH ALL ADMIN
     @GetMapping(value = "/allAdmins")
     public List<Administrator> findAllAdmins(){
         return adminService.getAllAdmins();
     }
 
-    // END POINT TO FETCH SINGLE EMPLOYEE
+    // END POINT TO FETCH SINGLE ADMIN
     @GetMapping(value = "/findAdmin/{id}")
     public Optional<Administrator> findAdminById(@PathVariable(value = "id") int adminId){
         return adminService.getAdminById(adminId);
     }
 
-    // END POINT TO ADD NEW EMPLOYEE
+    // END POINT TO ADD NEW ADMIN
     @PostMapping(value = "/addAdmin")
     public void addNewAdmin(@RequestBody Administrator adminObj){
         adminService.addNewAdmin(adminObj);
     }
 
-    // END POINT TO UPDATE AN EMPLOYEE
+    // END POINT TO UPDATE AN ADMIN
     @PutMapping(value = "/updateAdmin")
     public void updateNewAdmin(@RequestBody Administrator adminObj){
         adminService.updateAdminById(adminObj);
     }
 
-    // END POINT TO DELETE AN EMPLOYEE
+    // END POINT TO DELETE AN ADMIN
     @DeleteMapping(value = "/deleteAdmin")
     public void deleteNewAdmin(@RequestBody Administrator adminObj){
         adminService.deleteAdminById(adminObj);
