@@ -58,9 +58,9 @@ public class Student {
         this.student_password = student_password;
     }
 
-    public void Employee(){}
+    public Student(){}
 
-    public void Employee(Long student_id, String student_name, String student_address, String student_email, String student_password) {
+    public Student(Long student_id, String student_name, String student_address, String student_email, String student_password) {
         this.student_id = student_id;
         this.student_name = student_name;
         this.student_address = student_address;
