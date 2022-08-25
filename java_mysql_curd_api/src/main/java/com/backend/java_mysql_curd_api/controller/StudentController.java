@@ -22,7 +22,7 @@ public class StudentController{
 
     // END POINT TO FETCH SINGLE STUDENT
     @GetMapping(value = "/findStudent/{id}")
-    public Optional<Student> findStudentById(@PathVariable(value = "id") int student_id){
+    public Optional<Student> findStudentById(@PathVariable(value = "id") Long student_id){
         return studentService.getStudentById(student_id);
     }
 

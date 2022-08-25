@@ -10,7 +10,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int student_id;
+    private Long student_id;
 
     private String student_name;
     private String student_address;
@@ -18,11 +18,11 @@ public class Student {
     private String student_password;
 
 
-    public int getStudent_Id() {
+    public Long getStudent_Id() {
         return student_id;
     }
 
-    public void setId(int student_id) {
+    public void setId(Long student_id) {
         this.student_id = student_id;
     }
 
@@ -60,7 +60,7 @@ public class Student {
 
     public void Employee(){}
 
-    public void Employee(int student_id, String student_name, String student_address, String student_email, String student_password) {
+    public void Employee(Long student_id, String student_name, String student_address, String student_email, String student_password) {
         this.student_id = student_id;
         this.student_name = student_name;
         this.student_address = student_address;
