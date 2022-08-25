@@ -22,11 +22,11 @@ public class Student {
         return student_id;
     }
 
-    public void setId(Long student_id) {
+    public void setStudent_Id(Long student_id) {
         this.student_id = student_id;
     }
 
-    public String getStduent_Name() {
+    public String getStudent_Name() {
         return student_name;
     }
 
