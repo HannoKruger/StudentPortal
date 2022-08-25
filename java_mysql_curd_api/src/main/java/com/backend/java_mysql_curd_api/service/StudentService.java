@@ -21,7 +21,7 @@ public class StudentService {
     }
 
     // FETCHING STUDENT BY ID
-    public Optional<Student> getStudentById(Long student_id){
+    public Optional<Student> getStudentById(int student_id){
         return studentRepository.findById(student_id);
     }
 
