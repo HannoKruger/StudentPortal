@@ -9,5 +9,4 @@ public class JavaMysqlCurdApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaMysqlCurdApiApplication.class, args);
 	}
-
 }
