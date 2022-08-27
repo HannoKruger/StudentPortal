@@ -15,30 +15,35 @@ public class StudentController{
     private StudentService studentService;
 
     // END POINT TO FETCH ALL STUDENT
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/allStudents")
     public List<Student> findAllStudents(){
         return studentService.getAllStudents();
     }
 
     // END POINT TO FETCH SINGLE STUDENT
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/findStudent/{id}")
     public Optional<Student> findStudentById(@PathVariable(value = "id") int student_id){
         return studentService.getStudentById(student_id);
     }
 
     // END POINT TO ADD NEW STUDENT
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/addStudent")
     public void addNewEmployee(@RequestBody Student studentObj){
         studentService.addNewStudent(studentObj);
     }
 
     // END POINT TO UPDATE A STUDENT
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping(value = "/updateStudent")
     public void updateNewEmployee(@RequestBody Student studentObj){
         studentService.updateStudentById(studentObj);
     }
 
     // END POINT TO DELETE A STUDENT
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping(value = "/deleteStudent")
     public void deleteNewStudent(@RequestBody Student studentObj){
         studentService.deleteStudent(studentObj);
