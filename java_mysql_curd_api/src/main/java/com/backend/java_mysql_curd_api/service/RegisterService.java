@@ -15,27 +15,27 @@ public class RegisterService {
     private RegisterRepository registerRepository;
 
 
-    // FETCHING ALL STUDENT DATA
+    // FETCHING ALL REGISTER DATA
     public List<Register> getAllRegisters(){
         return registerRepository.findAll();
     }
 
-    // FETCHING STUDENT BY ID
+    // FETCHING REGISTER BY ID
     public Optional<Register> getRegisterById(int register_id){
         return registerRepository.findById(register_id);
     }
 
-    // ADD NEW STUDENT
+    // ADD NEW REGISTER
     public void addNewRegister(Register registerObj){
         registerRepository.save(registerObj);
     }
 
-    // DELETING STUDENT BY ID
+    // DELETING REGISTER BY ID
     public void deleteRegister(Register registerObj){
         registerRepository.deleteById(registerObj.getRegister_Id());
     }
 
-    // UPDATING STUDENT BY ID
+    // UPDATING REGISTER BY ID
     public void updateRegisterById(Register registerObj){
         registerRepository.save(registerObj);
     }
