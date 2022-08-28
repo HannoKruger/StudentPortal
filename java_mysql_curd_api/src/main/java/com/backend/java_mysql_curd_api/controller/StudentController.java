@@ -31,14 +31,14 @@ public class StudentController{
     // END POINT TO ADD NEW STUDENT
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/addStudent")
-    public void addNewEmployee(@RequestBody Student studentObj){
+    public void addNewStudent(@RequestBody Student studentObj){
         studentService.addNewStudent(studentObj);
     }
 
     // END POINT TO UPDATE A STUDENT
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping(value = "/updateStudent")
-    public void updateNewEmployee(@RequestBody Student studentObj){
+    public void updateNewStudent(@RequestBody Student studentObj){
         studentService.updateStudentById(studentObj);
     }
 
