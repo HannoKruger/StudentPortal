@@ -25,14 +25,14 @@ public class LoginService {
         for (Administrator administrator : administrators) {
             if (administrator.getName().equals(userName) & administrator.getPassword().equals(password)) {
                 
-                return new User(administrator.getName(), administrator.getPassword(), "admin");
+                return new User(administrator.getId(), administrator.getName(),administrator.getName(), "admin",administrator.getContact(),"No address", administrator.getPassword());
                 
             }
         }
 
         for (Student student : students) {
             if (student.getStudent_Email().equals(userName) & student.getStudent_Password().equals(password)) {
-                return new User(student.getStudent_Email(), student.getStudent_Password(), "student");
+                return new User(student.getStudent_Id(), student.getStudent_Name(),student.getStudent_Email(), "student",student.getStudent_Email(),student.getStudent_Address(), student.getStudent_Password());
             }
         }
 
